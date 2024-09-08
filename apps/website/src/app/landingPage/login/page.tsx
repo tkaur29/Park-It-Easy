@@ -23,7 +23,7 @@ export default function LoginPage() {
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://13.234.238.216";
 
     try {
       const response = await fetch(`${apiUrl}/admin/login/postLoginDetails`, {

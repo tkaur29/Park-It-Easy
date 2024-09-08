@@ -106,7 +106,7 @@ export default function Profile() {
   // Submit Parking Fee Form
   const submitParkingFee = async (e) => {
     e.preventDefault();
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://13.234.238.216";
     const authToken = "Bearer yourTokenHere"; // Replace with actual token
 
     const host = window.location.href;
@@ -144,7 +144,7 @@ export default function Profile() {
   // Submit Parking Layout Form
   const submitParkingLayout = async (e) => {
     e.preventDefault();
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://13.234.238.216";
     const authToken = "Bearer yourTokenHere"; // Replace with actual token
 
     const host = window.location.href;
@@ -185,7 +185,7 @@ export default function Profile() {
   // Submit Mall Details Form
   const submitMallDetails = async (e) => {
     e.preventDefault();
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://13.234.238.216";
     const authToken = "Bearer yourTokenHere"; // Replace with actual token
 
     try {

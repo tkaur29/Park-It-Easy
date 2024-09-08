@@ -1,9 +1,15 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const ParkingLayout = () => {
+  const router = useRouter()
   // Static data for blocks, pillars, and slots within pillars
+  const handleProceed = async () => {
+    router.push("http://localhost:3001/directions");
+  }
+
   const staticData = [
     {
       name: 'A',
@@ -100,7 +106,15 @@ const ParkingLayout = () => {
           </p>
         </div>
       )}
+      <button
+            type="button"
+            onClick={handleProceed}
+            className="w-full bg-black hover:bg-black text-white font-bold py-3 px-4 rounded-md focus:outline-none focus:shadow-outline"
+          >
+            See Directions
+          </button>
     </div>
+
   );
 };
 

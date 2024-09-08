@@ -25,7 +25,7 @@ export default function SignUpPage() {
     if (name === "organizationUniqueDomainID") {
       try {
         const response = await fetch(
-          `http://localhost:8000/register/organizationExists?organizationUniqueDomainID=${value}`,
+          `https://13.234.238.216/register/organizationExists?organizationUniqueDomainID=${value}`,
           {
             method: "GET",
             headers: {
@@ -56,7 +56,7 @@ export default function SignUpPage() {
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"; 
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://13.234.238.216"; 
 
     try {
       const response = await fetch(`${apiUrl}/register/registerUser`, {
@@ -88,7 +88,7 @@ export default function SignUpPage() {
       });
 
       // Redirect to login page
-      router.push("/landingPage/login");
+      router.push("http://localhost:3001");
     } catch (error) {
       console.error("Error:", error);
       setSuccessMessage("There was an error submitting the form");

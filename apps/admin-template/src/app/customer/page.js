@@ -5,8 +5,6 @@ export default function Customer() {
     return (
         <div>
             <EditVehicleDetails/>
-            <ParkingLayout/>
-            {/* <Directions/> */}
         </div>
     )
 }

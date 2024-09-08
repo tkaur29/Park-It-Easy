@@ -54,7 +54,7 @@ export default function LandingPage() {
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8000/website/contactUs`, {
+      const response = await fetch(`https://13.234.238.216/website/contactUs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,12 +108,12 @@ export default function LandingPage() {
             </a>
           </div>
           <div className="sm:pl-8 font-semibold flex self-center md:gap-3 sm:gap-2">
-            <button
+            {/* <button
               onClick={() => router.push("/landingPage/login")} // Navigate to Login Page
               className="font-semibold bg-white text-black border border-black rounded-lg p-2 w-20 hover:bg-black duration-500 hover:text-white"
             >
               Login
-            </button>
+            </button> */}
             <button
               onClick={() => router.push("/landingPage/signup")} // Navigate to Signup Page
               className="font-semibold bg-black text-white rounded-lg p-2 w-20 hover:bg-gray-800 hover:border hover:border-black"
@@ -155,7 +155,7 @@ export default function LandingPage() {
 
       <section id="solution" className="w-full flex flex-col lg:flex-row justify-between relative items-center">
         <div className="w-[85%] bg-white md:w-[40%] ml-[4rem] md:ml-0 h-[600px] lg:h-[900px] mt-7 rounded-tl-xl rounded-tr-xl md:rounded-tr-none md:rounded-bl-xl flex justify-center items-center relative overflow-hidden">
-          <img src="/image.png" alt="mobile" loading="lazy" className="absolute inset-0 w-[100%] h-[100%]" />
+          <img src="/designMockup.svg" alt="mobile" loading="lazy" className="absolute inset-0 w-[100%] h-[100%]" />
         </div>
 
         <div className="w-full md:w-[60%] flex flex-col justify-center items-center gap-[2rem] p-6">

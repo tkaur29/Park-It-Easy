@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import RazorpayPayment from "../../../../backend/src/razorpay/components/razorPayment";
+import { useRouter } from 'next/navigation';
 
 function EditVehicleDetails() {
+  const router = useRouter()
   const [licensePlate, setLicensePlate] = useState('');
   const [vehicleType, setVehicleType] = useState('Car');
   const [fee, setFee] = useState('');
@@ -49,6 +50,7 @@ function EditVehicleDetails() {
     } catch (error) {
       console.error('Error submitting details:', error);
     }
+    router.push("http://localhost:3001/parkingLayout");
   };
 
   return (
