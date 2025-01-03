@@ -80,6 +80,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.0.2",
     "@nextui-org/react": "^2.4.6",
+    "@spark-starter-kit/source": "file:",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
